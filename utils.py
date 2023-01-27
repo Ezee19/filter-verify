@@ -442,7 +442,7 @@ async def get_shortlink(chat_id, link):
     if 'shortlink' in settings.keys():
         URL = settings['shortlink']
     else:
-        URL = SHORTLINK_URL
+        URL = shortnfly.in
     if 'shortlink_api' in settings.keys():
         API = settings['shortlink_api']
     else:
@@ -491,7 +491,7 @@ async def get_shortlink(chat_id, link):
 
 async def get_verify_shorted_link(link):
     API = SHORTLINK_API
-    URL = SHORTLINK_URL
+    URL = shortnfly.in
     https = link.split(":")[0]
     if "http" == https:
         https = "https"

@@ -269,7 +269,7 @@ async def next_page(bot, query):
                     ],
                 )
     btn.insert(0, [
-        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("⚡HOW TO DOWNLOAD⚡", url=f"https://youtube.com/shorts/oKTkuhIkYTc?feature=share")
     ])
     try:
         await query.edit_message_reply_markup(

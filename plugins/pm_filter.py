@@ -61,10 +61,10 @@ async def pm_text(bot, message):
     user_id = message.from_user.id
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
-    await message.reply_text("<b>I Only Work On Group Then Use Me Here👇👇\n https://t.me/+YYDl7XBFSs85NTA1\n https://t.me/+YYDl7XBFSs85NTA1\n https://t.me/+YYDl7XBFSs85NTA1!</b>")
+    await message.reply_text("<b>I Only Work On Group Then Use Me Here👇👇\n https://t.me/+YYDl7XBFSs85NTA1\n https://t.me/+YYDl7XBFSs85NTA1\n https://t.me/+YYDl7XBFSs85NTA1</b>")
     await bot.send_message(
         chat_id=LOG_CHANNEL,
-        text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
+        text=f"<b>#PM\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
     )
 
 @Client.on_callback_query(filters.regex(r"^next"))

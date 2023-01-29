@@ -484,10 +484,10 @@ async def get_shortlink(chat_id, link):
                         return data["shortenedUrl"]
                     else:
                         logger.error(f"Error: {data['message']}")
-                        return f'https://{URL}/api?api={API}&link={link}'
+                        return f'https://{URL}/api?api={API}&url={link}'
         except Exception as e:
             logger.error(e)
-            return f'https://{URL}/api?api={API}&link={link}'
+            return f'https://{URL}/api?api={API}&url={link}'
 
 async def get_verify_shorted_link(link):
     API = SHORTLINK_API
@@ -529,11 +529,11 @@ async def get_verify_shorted_link(link):
                         return data['shortenedUrl']
                     else:
                         logger.error(f"Error: {data['message']}")
-                        return f'https://{URL}/api?api={API}&link={link}'
+                        return f'https://{URL}/api?api={API}&url={link}'
 
         except Exception as e:
             logger.error(e)
-            return f'{URL}/api?api={API}&link={link}'
+            return f'{URL}/api?api={API}&url={link}'
 
 async def check_token(bot, userid, token):
     user = await bot.get_users(userid)
